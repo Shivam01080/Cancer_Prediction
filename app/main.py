@@ -3,6 +3,7 @@ import pandas as pd
 import pickle as pk
 import plotly.graph_objects as go
 import numpy as np
+import os
 
 
 def clean_data():
@@ -67,7 +68,7 @@ def add_sidebar():
 def get_scaled_values(input_dict):
     data = clean_data()
 
-    X = data.drop(['diagnosis'], axis = 1)
+    X = data.drop(['diagnosis'], axis=1)
 
     scaled_dict = {}
 
@@ -132,8 +133,8 @@ def get_radar_chart(input_data):
 
 
 def predict(input_data):
-    model = pk.load(open("C:\\Users\\HP\\PycharmProjects\\Cancer-Detection\\model\\model,pkl", "rb"))
-    scaler = pk.load(open('C:\\Users\\HP\\PycharmProjects\\Cancer-Detection\\model\\scaler.pkl', "rb"))
+    model = pk.load(open("model/model.pkl", "rb"))
+    scaler = pk.load(open("model/scaler.pkl", "rb"))
 
     input_array = np.array(list(input_data.values())).reshape(1, -1)
 
@@ -152,6 +153,7 @@ def predict(input_data):
     st.write("Probability of being Benign: ", model.predict_proba(input_array_scaled)[0][0])
     st.write("Probability of being Malicious: ", model.predict_proba(input_array_scaled)[0][1])
     st.write("This app is only to assist professionals and not a substitute")
+
 
 def main():
     st.set_page_config(page_title="Breast Cancer Diagnosis",

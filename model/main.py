@@ -37,7 +37,7 @@ def main():
     data = clean_data()
     model, scaler = create_model(data)
 
-    with open('model,pkl', 'wb') as f:
+    with open('model.pkl', 'wb') as f:
         pk.dump(model, f)
 
     with open('scaler.pkl', 'wb') as f:
