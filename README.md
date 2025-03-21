@@ -50,7 +50,7 @@ The model is trained on the **Breast Cancer Wisconsin Dataset**, which is public
 4. The result is displayed on the screen along with a probability score.
 
 ## Deployment
-The app is deployed on **Streamlit Cloud**. You can access it [Breast-Cancer-Prediction](https://your-app-name.streamlit.app/](https://cancerprediction-uxdmvfvxaft6dsmb3qh4a8.streamlit.app/).
+The app is deployed on **Streamlit Cloud**. You can access it [Breast-Cancer-Prediction](https://cancerprediction-uxdmvfvxaft6dsmb3qh4a8.streamlit.app/).
 
 ## Future Enhancements
 - Improve the model with **deep learning** techniques.
